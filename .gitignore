@@ -1,0 +1,4 @@
+djangoRT/djangoRT/__pycache__/*
+djangoRT/firstpage/__pycache__/*
+djangoRT/firstpage/migrations/*
+djangoRT/db.sqlite3
