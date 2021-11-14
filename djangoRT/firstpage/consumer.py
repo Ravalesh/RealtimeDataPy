@@ -11,8 +11,10 @@ class DashConsumer(AsyncWebsocketConsumer):
         await self.accept()
 
     async def disconnect(self, code):
-        # await self.disconnect()
-        pass
+        await self.channel_layer.group_discard(
+            self.groupname,
+            self.channel_name
+        )
 
     async def receive(self, text_data):
         datapoint = json.loads(text_data)
